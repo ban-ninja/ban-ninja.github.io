@@ -1,5 +1,70 @@
-<!doctype html>
-<script>
-  var id = parseInt(location.search.substring(1))
-  location.replace('https://github.com/ban-ninja/ban-ninja.github.io/wiki')
-</script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="让天下没有难下的源.">
+    <meta name="keywords" content="homebrew">
+    <meta name="author" content="Heaven, Jianjun Mao, landy, and Miclle Zheng">
+
+    <title>搬:让天下没有难下的源</title>
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/stylesheets/application.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="jumbotron">
+      <div class="jumbotron-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="ninja animated smooth fadeInLeftBig"></div>
+            </div>
+            <div class="col-md-7">
+              <div class="intro">
+                <h1 class="animated smooth fadeInUp delay2">让天下没有难下的源</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="text-center">Homebrew</h2>
+      <div>
+        <h3>配置镜像源</h3>
+        设置环境变量 HOMEBREW_BOTTLE_DOMAIN 即可使用本镜像源加速下载 Homebrew 资源。
+
+        <h4>bash</h4>
+        在 ~/.bashrc 中加入
+        export HOMEBREW_BOTTLE_DOMAIN=http://7xkcej.dl1.z0.glb.clouddn.com
+
+
+        <h4>fish</h4>
+        在 ~/.config/fish/config.fish 中加入
+        set -x HOMEBREW_BOTTLE_DOMAIN http://7xkcej.dl1.z0.glb.clouddn.com
+
+        <h4>配置 Git 源（可选）</h4>
+        Homebrew 仓库默认托管在 GitHub 上，但是国内连接 GitHub 也不是很稳定，所以同样镜像了一份 Git 仓库到 GitCafe。 要使用 GitCafe 仓库源请运行一下命令：
+
+        cd /usr/local
+        git remote set-url origin https://gitcafe.com/ban-ninja/homebrew.git
+
+
+        <h4>说明</h4>
+        本镜像源使用七牛云存储来加速，每十分钟同步一次
+        本镜像源只镜像了 Homebrew 托管在 Bintray 上的二进制预编译包，所以只对这些二进制包有加速功能（Homebrew 大部分情况下使用该渠道下载安装软件）。
+        GitCafe 上的 Homebrew 仓库同样是每十分钟同步一次
+      </div>
+    </div>
+
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

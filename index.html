@@ -56,18 +56,8 @@
           </div>
 
           <div class="step">
-            <h4>配置 Git 源（可选）</h4>
-            <p>Homebrew 仓库默认托管在 GitHub 上，但是国内连接 GitHub 也不是很稳定，所以同样镜像了一份 Git 仓库到 GitCafe。 要使用 GitCafe 仓库源请运行一下命令：</p>
-            <pre>
-cd /usr/local
-git remote set-url origin https://gitcafe.com/ban-ninja/homebrew.git</pre>
-          </div>
-
-          <div class="step">
             <h4>说明</h4>
-            本镜像源使用七牛云存储来加速，每十分钟同步一次
             本镜像源只镜像了 Homebrew 托管在 Bintray 上的二进制预编译包，所以只对这些二进制包有加速功能（Homebrew 大部分情况下使用该渠道下载安装软件）。
-            GitCafe 上的 Homebrew 仓库同样是每十分钟同步一次
           </div>
         </div>
       </div>
